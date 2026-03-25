@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark Theme Colors */
+    --background: 222 47% 7%;         /* deep dark */
+    --foreground: 210 40% 98%;        /* near white */
+
+    --card: 222 47% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 25%;
+    --input: 217 33% 17%;
+    --ring: 224 71% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom theme colors */
+    --darkblue: 210 100% 20%;
+    --soft-blue: 210 80% 95%;
+    --soft-purple: 260 80% 95%;
+    --soft-gray: 220 30% 96%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    @apply text-foreground;
+    background: linear-gradient(
+      to bottom,
+      hsl(222 47% 7%),
+      hsl(222 47% 10%),
+      hsl(222 47% 5%)
+    );
+  }
+
+  .section {
+    @apply py-16 px-4 md:px-8 lg:px-16;
+  }
+
+  .card-shadow {
+    @apply shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-semibold mb-8 text-center;
+    color: hsl(var(--primary));
+  }
+  .gradient-text {
+  background: linear-gradient(
+    270deg,
+    #a78bfa,
+    #f472b6,
+    #60a5fa,
+    #a78bfa
+  );
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+}
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+  }
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+}
