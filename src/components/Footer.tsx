@@ -8,7 +8,7 @@ const Footer = () => {
     { name: 'about', icon: <User size={14} /> },
     { name: 'skills', icon: <Code size={14} /> },
     { name: 'projects', icon: <FolderOpen size={14} /> },
-    { name: 'contact', icon: <Phone size={14} /> },
+    // { name: 'contact', icon: <Phone size={14} /> },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/isha-waris/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-gray-800 hover:bg-blue-600 transition-all"

@@ -6,43 +6,20 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-      <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-gray-950 to-black py-20">      
+      <section id="hero" className="relative min-h-screen flex items-center justify-center">      
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between">
 
-          {/* LEFT SIDE */}
           <div className="text-left md:w-1/2 animate-fade-in mb-8 md:mb-0">
 
-            {/* Heading */}
             <h1 className="text-6xl md:text-4xl font-bold mb-4 leading-tight gradient-text"> Hi, I'm Isha Waris </h1>
 
-            {/* Short Description */}
             <p className="text-lg max-w-xl mb-6 text-gray-300">
               .NET Developer with 1.5+ years of experience building RESTful APIs,
               real-time monitoring systems, and data-driven applications using
               ASP.NET Core, SQL Server, and modern web technologies.
             </p>
 
-            {/* Proof Points */}
-            {/* <div className="mb-6 text-gray-300 space-y-1">
-              <p>✔ Built real-time industrial monitoring system</p>
-              <p>✔ Designed scalable REST APIs using ASP.NET Core</p>
-              <p>✔ Optimized database queries for performance</p>
-            </div> */}
-
-            {/* Tech Stack */}
-            {/* <div className="flex flex-wrap gap-3 mb-8">
-              {["C#", ".NET", "ASP.NET Core", "SQL Server", "React", "MongoDB"].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-1 bg-white/10 text-gray-200 text-sm rounded-full border border-white/10 backdrop-blur-sm"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div> */}
-
-            {/* Buttons */}
             <div className="flex flex-wrap gap-4">
               <Button
                 asChild
@@ -57,15 +34,6 @@ const Hero = () => {
                 className="rounded-full px-6 border-techblue text-techblue hover:bg-techblue/10 transition-transform duration-200 hover:scale-105"
               >
                 <a href="#contact">Contact Me</a>
-              </Button>
-
-              <Button
-                asChild
-                className="bg-techblue hover:bg-techblue/90 rounded-full px-6 transition-transform duration-200 hover:scale-105"
-              >
-                <a href="/Isha_Waris_CV.pdf" target="_blank" rel="noopener noreferrer">
-                  Download CV
-                </a>
               </Button>
             </div>
           </div>
@@ -101,7 +69,6 @@ const Hero = () => {
                 </pre>
               </div>
 
-              {/* Floating Card 1 */}
               <div className="absolute -top-6 -left-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 shadow-lg flex items-center gap-3 float">
                 <Server className="text-purple-400" size={20} />
                 <div>
@@ -110,7 +77,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Floating Card 2 */}
               <div className="absolute top-1/2 -right-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 shadow-lg flex items-center gap-3 float">
                 <Database className="text-pink-400" size={20} />
                 <div>
@@ -119,7 +85,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Floating Card 3 */}
              <div className="absolute -bottom-6 left-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 shadow-lg flex items-center gap-3 float">
               <Layers className="text-blue-400" size={20} />
               <div>

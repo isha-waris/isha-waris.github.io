@@ -14,12 +14,13 @@ const Contact = () => {
 
           {/* Left Card - Contact Info */}
           <motion.div
+            className="w-full"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-             <Card className="group relative h-full overflow-hidden card-shadow border border-gray-800 bg-gray-900/60 backdrop-blur transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:border-blue-500">
+              <Card className="w-full group relative overflow-hidden card-shadow border border-gray-800 bg-gray-900/60 backdrop-blur transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:border-blue-500">
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 pointer-events-none" />
                 <CardContent className="relative pt-6 h-full flex flex-col">
                 <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
@@ -35,19 +36,6 @@ const Contact = () => {
                       <h4 className="font-medium">Email</h4>
                       <a href="mailto:ishawaris844@gmail.com" className="text-techblue hover:underline">
                         ishawaris844@gmail.com
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Phone */}
-                  <div className="flex items-start">
-                    <div className="bg-techblue text-white p-3 rounded-full mr-4">
-                      <Phone size={20} />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Phone</h4>
-                      <a href="tel:+923084138763" className="text-techblue hover:underline">
-                        +92-308-4138763
                       </a>
                     </div>
                   </div>
@@ -92,7 +80,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Right Card - WhatsApp CTA */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -123,7 +111,7 @@ const Contact = () => {
 
             </CardContent>
           </Card>
-          </motion.div>
+          </motion.div> */}
 
         </div>
       </div>

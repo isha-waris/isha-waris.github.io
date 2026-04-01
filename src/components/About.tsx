@@ -21,10 +21,9 @@ const About = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-          {/* PROFILE CARD */}
           <motion.div className="w-full">
             <motion.div whileHover={hoverEffect}>
-              <Card className="bg-gray-900/70 border border-gray-700 text-white h-full flex flex items-center justify-center">
+              <Card className="bg-gray-900/70 border-gray-700 text-white h-full flex flex items-center justify-center">
                 
                 <CardContent className="pt-6 flex flex-col justify-center items-center text-center h-full">
 
@@ -56,7 +55,6 @@ const About = () => {
           </motion.div>
 
 
-          {/* EXPERIENCE */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -88,55 +86,6 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-
-          {/* MINDSET */}
-          {/* <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <motion.div whileHover={hoverEffect}>
-              <Card className="bg-gray-900/70 border border-gray-700 text-white">
-                <CardContent className="pt-6">
-
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <GraduationCap size={20} className="text-blue-400 mr-2" />
-                    Mindset & Approach
-                  </h3>
-
-                  <div className="space-y-4">
-
-                    <div className="flex gap-3">
-                      <Lightbulb className="text-blue-400 mt-1" size={18} />
-                      <p className="text-sm text-gray-300">
-                        I break down complex problems into smaller, manageable parts.
-                      </p>
-                    </div>
-
-                    <div className="flex gap-3">
-                      <Code className="text-blue-400 mt-1" size={18} />
-                      <p className="text-sm text-gray-300">
-                        I write clean, maintainable, and scalable code.
-                      </p>
-                    </div>
-
-                    <div className="flex gap-3">
-                      <Zap className="text-blue-400 mt-1" size={18} />
-                      <p className="text-sm text-gray-300">
-                        I continuously learn and improve through real-world challenges.
-                      </p>
-                    </div>
-
-                  </div>
-
-                </CardContent>
-              </Card>
-            </motion.div>
-          </motion.div> */}
-
-
-          {/* WHAT I DELIVER */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

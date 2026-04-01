@@ -21,7 +21,7 @@ const Navbar = () => {
     { label: 'About', href: '#about', icon: <User size={16} /> },
     { label: 'Skills', href: '#skills', icon: <Code size={16} /> },
     { label: 'Projects', href: '#projects', icon: <FolderOpen size={16} /> },
-    { label: 'Contact', href: '#contact', icon: <Phone size={16} /> },
+    // { label: 'Contact', href: '#contact', icon: <Phone size={16} /> },
   ];
 
   return (
