@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const About = () => {
 
   const hoverEffect = {
-    scale: 1.03,
+    scale: 1,
     boxShadow: "0px 0px 25px rgba(59,130,246,0.4)"
   };
 
@@ -21,8 +21,12 @@ const About = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-          <motion.div className="w-full">
-            <motion.div whileHover={hoverEffect}>
+            <motion.div   
+              initial={{ scale: 1, boxShadow: "0px 0px 0px rgba(59,130,246,0)" }} 
+              whileHover={hoverEffect}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }} 
+              className="rounded-xl"
+            >
               <Card className="bg-gray-900/70 border-gray-700 text-white h-full flex flex items-center justify-center">
                 
                 <CardContent className="pt-6 flex flex-col justify-center items-center text-center h-full">
@@ -52,24 +56,21 @@ const About = () => {
 
               </Card>
             </motion.div>
-          </motion.div>
 
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <motion.div whileHover={hoverEffect}>
-              <Card className="bg-gray-900/70 border border-gray-700 text-white h-full flex flex items-center justify-center">
-                <CardContent className="pt-6 flex flex-col justify-center items-center text-center h-full">
-                  
-                  <h3 className="text-xl font-semibold mb-4 flex items-center">
-                    <Briefcase size={20} className="text-blue-400 mr-2" />
-                    Background
-                  </h3>
+           <motion.div
+              initial={{ scale: 1, boxShadow: "0px 0px 0px rgba(59,130,246,0)" }}
+              whileHover={hoverEffect}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="w-full h-full bg-gray-900/70 border border-gray-700 text-white rounded-xl overflow-hidden"
+            >
+              <CardContent className="pt-6 flex flex-col justify-center items-center text-center h-full">
+                <h3 className="text-xl font-semibold mb-4 flex items-center">
+                  <Briefcase size={20} className="text-blue-400 mr-2" />
+                  Background
+                </h3>
 
+                <div className="space-y-3"> 
                   <p className="text-sm text-gray-300 leading-relaxed">
                     .NET Developer with 1.5+ years of experience building RESTful APIs,
                     real-time monitoring systems, and data-driven applications using 
@@ -77,22 +78,22 @@ const About = () => {
                     in designing scalable backend systems, optimizing databases, and 
                     integrating frontend applications with React. Focused on writing clean, 
                     maintainable code and delivering reliable, performance-oriented solutions.
+
                   </p>
                   <p className="text-sm text-gray-300 leading-relaxed">✔ Built real-time industrial monitoring system</p>
                   <p className="text-sm text-gray-300 leading-relaxed">✔ Designed scalable REST APIs using ASP.NET Core</p>
                   <p className="text-sm text-gray-300 leading-relaxed">✔ Optimized database queries for performance</p>
-                </CardContent>
-              </Card>
+                </div>
+              </CardContent>
             </motion.div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="lg:col-span-2"
-          >
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:col-span-2"
+            >
             <Card className="bg-gray-900/70 border border-gray-700 text-white">
               <CardContent className="pt-6">
 

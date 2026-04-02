@@ -32,7 +32,6 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
         
-        {/* Logo */}
         <a
           href="#"
           className="text-2xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-pink-300 bg-clip-text text-transparent"
@@ -40,7 +39,6 @@ const Navbar = () => {
           Isha Waris
         </a>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {navItems.map((item) => (
             <a
@@ -54,7 +52,6 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
         <Button
           variant="ghost"
           size="icon"
@@ -64,7 +61,6 @@ const Navbar = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </Button>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-black border-t border-gray-800 shadow-lg md:hidden">
             <div className="flex flex-col p-4 space-y-3">

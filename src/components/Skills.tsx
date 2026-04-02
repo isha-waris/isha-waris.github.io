@@ -71,7 +71,6 @@ const Skills = () => {
               <Card
                 className="group relative h-full overflow-hidden card-shadow border border-gray-800 bg-gray-900/60 backdrop-blur transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:border-blue-500"
               >
-                {/* Glow overlay */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 pointer-events-none" />
 
                 <CardContent className="relative pt-6 h-full flex flex-col">

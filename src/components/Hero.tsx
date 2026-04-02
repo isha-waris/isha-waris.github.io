@@ -97,12 +97,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Down */}
-        {/* <div className="absolute bottom-10 left-0 right-0 animate-bounce text-center">
-          <a href="#about" className="inline-block text-gray-500 hover:text-techblue transition-colors">
-            <ChevronDown size={32} />
-          </a>
-        </div> */}
       </div>      
     </section>
   );

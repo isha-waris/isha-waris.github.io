@@ -12,7 +12,6 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-          {/* Left Card - Contact Info */}
           <motion.div
             className="w-full"
             initial={{ opacity: 0, x: -50 }}
@@ -27,7 +26,6 @@ const Contact = () => {
 
                 <div className="space-y-6">
 
-                  {/* Email */}
                   <div className="flex items-start">
                     <div className="bg-techblue text-white p-3 rounded-full mr-4">
                       <Mail size={20} />
@@ -40,7 +38,6 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  {/* Location */}
                   <div className="flex items-start">
                     <div className="bg-techblue text-white p-3 rounded-full mr-4">
                       <MapPin size={20} />
