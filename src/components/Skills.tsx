@@ -1,103 +1,127 @@
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { motion } from 'framer-motion';
-import { Code, Server, Database, Wrench } from 'lucide-react';
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Code,
+  Server,
+  Database,
+  Wrench,
+  Globe,
+  Smartphone,
+} from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Languages',
-      icon: <Code className="w-5 h-5 text-techblue" />,
-      skills: ['C#', 'JavaScript', 'Python', 'C++']
-    },
-    {
-      title: 'Backend',
-      icon: <Server className="w-5 h-5 text-techblue" />,
+      title: "Languages",
+      icon: <Code className="w-5 h-5 text-blue-400" />,
+      color: "from-blue-500 to-cyan-500",
       skills: [
-        '.NET',
-        'ASP.NET Core',
-        'RESTful APIs',
-        'Entity Framework Core',
-        'JWT Authentication',
-        'Layered Architecture',
-        'Microservices'
-      ]
+        { name: "C#", level: 90 },
+        { name: "JavaScript", level: 85 },
+        { name: "Python", level: 75 },
+      ],
     },
     {
-      title: 'Frontend',
-      icon: <Code className="w-5 h-5 text-techblue" />,
-      skills: ['React.js', 'HTML', 'CSS']
+      title: "Backend",
+      icon: <Server className="w-5 h-5 text-purple-400" />,
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: ".NET Core", level: 95 },
+        { name: "ASP.NET Core", level: 90 },
+        { name: "REST APIs", level: 88 },
+        { name: "Entity Framework", level: 85 },
+      ],
     },
     {
-      title: 'Databases',
-      icon: <Database className="w-5 h-5 text-techblue" />,
-      skills: ['SQL Server', 'MongoDB', 'Firebase']
+      title: "Frontend",
+      icon: <Globe className="w-5 h-5 text-green-400" />,
+      color: "from-green-500 to-emerald-500",
+      skills: [
+        { name: "React.js", level: 80 },
+        { name: "HTML/CSS", level: 90 },
+      ],
     },
     {
-      title: 'Tools & Platforms',
-      icon: <Wrench className="w-5 h-5 text-techblue" />,
-      skills: ['Git', 'Postman', 'SSMS', 'VS Code', 'SonarQube', 'Flutter', 'Docker', 'CI/CD']
-    }
+      title: "Databases",
+      icon: <Database className="w-5 h-5 text-orange-400" />,
+      color: "from-orange-500 to-red-500",
+      skills: [
+        { name: "SQL Server", level: 90 },
+        { name: "MongoDB", level: 75 },
+      ],
+    },
+    {
+      title: "Tools",
+      icon: <Wrench className="w-5 h-5 text-yellow-400" />,
+      color: "from-yellow-500 to-orange-500",
+      skills: [
+        { name: "Git", level: 90 },
+        { name: "Docker", level: 75 },
+        { name: "Postman", level: 85 },
+      ],
+    },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0 }
-  };
-
   return (
-    <section id="skills" className="bg-gradient-to-b from-gray-900 via-gray-950 to-black py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="section-heading text-white text-center mb-10">Skills</h2>
+    <section
+      id="skills"
+      className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 py-20 relative overflow-hidden"
+    >
+      {/* Clean background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 right-20 w-48 h-48 bg-blue-500/10 rounded-full"></div>
+        <div className="absolute bottom-20 left-20 w-36 h-36 bg-purple-500/10 rounded-full"></div>
+        <div className="absolute top-1/2 left-1/4 w-40 h-40 bg-green-500/10 rounded-full"></div>
+      </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="show"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
-        >
+      <div className="container mx-auto px-4">
+        <h2 className="section-heading text-white text-center mb-16">
+          Skills & Expertise
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {skillCategories.map((category, index) => (
-            <motion.div key={index} variants={itemVariants} className="h-full">
-              <Card
-                className="group relative h-full overflow-hidden card-shadow border border-gray-800 bg-gray-900/60 backdrop-blur transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:border-blue-500"
-              >
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 pointer-events-none" />
+            <div key={index} className="h-full">
+              <Card className="group relative h-full overflow-hidden border border-gray-700 bg-gray-800 shadow-lg transition-shadow duration-200 hover:shadow-xl">
+                <div
+                  className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br ${category.color}/10 pointer-events-none`}
+                />
 
                 <CardContent className="relative pt-6 h-full flex flex-col">
-                  <div className="flex items-center gap-2 mb-4">
-                    {category.icon}
-                    <h3 className="text-lg font-semibold text-white">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-2 bg-gray-700 rounded-lg group-hover:bg-gray-600 transition-colors">
+                      {category.icon}
+                    </div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
                       {category.title}
                     </h3>
                   </div>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="space-y-4 flex-grow">
                     {category.skills.map((skill, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 text-xs rounded-full text-white 
-                        bg-gradient-to-r from-blue-500 to-indigo-600 
-                        hover:from-indigo-600 hover:to-blue-500 transition"
-                      >
-                        {skill}
-                      </span>
+                      <div key={i} className="group/skill">
+                        <div className="flex justify-between items-center mb-2">
+                          <span className="text-sm text-gray-300 group-hover/skill:text-white transition-colors">
+                            {skill.name}
+                          </span>
+                          <span className="text-xs text-gray-400 group-hover/skill:text-blue-400 transition-colors">
+                            {skill.level}%
+                          </span>
+                        </div>
+                        <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                          <div
+                            className={`h-full bg-gradient-to-r ${category.color} rounded-full`}
+                            style={{ width: `${skill.level}%` }}
+                          />
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

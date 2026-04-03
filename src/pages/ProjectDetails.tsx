@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { projectsData } from "@/components/ProjectData";
 import { ChevronRight } from "lucide-react";
@@ -9,6 +9,10 @@ const ProjectDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   const project = projectsData.find((p) => p.id === id);
 
   if (!project) {
@@ -17,28 +21,23 @@ const ProjectDetails = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white">
-      
-
-      <main className="flex-grow pt-24 pb-16">
+      <main className="flex-grow pt-20 pb-16">
         <div className="container mx-auto px-4">
-
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-          <span
-            className="cursor-pointer hover:text-white"
-            onClick={() => {
-              navigate("/");
-              setTimeout(() => {
-                const element = document.getElementById("projects");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }, 100);
-            }}
-          >
-            Home
-          </span>
-        <ChevronRight size={16} />
-        <span className="text-white">{project.title}</span>
-
-
+            <span
+              className="cursor-pointer hover:text-white"
+              onClick={() => {
+                navigate("/");
+                setTimeout(() => {
+                  const element = document.getElementById("projects");
+                  if (element) element.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+              }}
+            >
+              Home
+            </span>
+            <ChevronRight size={16} />
+            <span className="text-white">{project.title}</span>
           </div>
 
           <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
@@ -81,7 +80,6 @@ const ProjectDetails = () => {
               ))}
             </div>
           </div>
-
         </div>
       </main>
 
