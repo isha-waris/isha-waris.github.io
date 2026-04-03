@@ -57,7 +57,7 @@ const About = () => {
         </h2>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-200 group cursor-default">
@@ -81,7 +81,7 @@ const About = () => {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-br from-blue-500/10 to-purple-500/10 transition-opacity duration-300 pointer-events-none"></div>
               <CardContent className="relative pt-6 flex flex-col justify-center items-center text-center h-full z-10">
                 <div className="relative mb-6">
-                  <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-purple-400 shadow-2xl shadow-purple-500/50 relative">
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-gradient-to-r from-cyan-400 to-purple-400 shadow-2xl shadow-purple-500/50 relative">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-purple-100/50 rounded-full"></div>
                     <img
                       src="/images/mypic.jpeg"

@@ -150,7 +150,7 @@ const Projects = () => {
                 </CardContent>
 
                 <CardFooter className="border-t border-gray-700 pt-4">
-                  <div className="flex gap-3 w-full">
+                  <div className="flex flex-col sm:flex-row gap-3 w-full">
                     <Button
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 text-white transition-colors duration-200"
                       onClick={() => navigate(`/projects/${project.id}`)}
@@ -159,25 +159,29 @@ const Projects = () => {
                       View Details
                     </Button>
 
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-cyan-500/50 text-cyan-300 hover:bg-gray-800 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-200"
-                      onClick={() =>
-                        window.open(project.links.github, "_blank")
-                      }
-                    >
-                      <Github className="w-4 h-4" />
-                    </Button>
+                    <div className="flex gap-3">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 sm:flex-none border-cyan-500/50 text-cyan-300 hover:bg-gray-800 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-200"
+                        onClick={() =>
+                          window.open(project.links.github, "_blank")
+                        }
+                      >
+                        <Github className="w-4 h-4" />
+                      </Button>
 
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-cyan-500/50 text-cyan-300 hover:bg-gray-800 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-200"
-                      onClick={() => window.open(project.links.demo, "_blank")}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex-1 sm:flex-none border-cyan-500/50 text-cyan-300 hover:bg-gray-800 hover:border-cyan-400 hover:text-cyan-200 transition-all duration-200"
+                        onClick={() =>
+                          window.open(project.links.demo, "_blank")
+                        }
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    </div>
                   </div>
                 </CardFooter>
               </Card>
