@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   // ADD THIS LINE
-  base: mode === 'production' ? '/isha-waris.github.io/' : '/', 
+  base: '/',
   server: {
     host: "::",
     port: 5173,
